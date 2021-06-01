@@ -31,7 +31,8 @@ class pointsController extends Controller
             $response=APIHelpers::createAPIResponse('false',$request['point'].' points Added Success Fully','');
 return response(['response'=>$response],200);
         } catch (Throwable $throwable) {
-            dd($throwable);
+            $response=APIHelpers::createAPIResponse(true,'Points cannot added this moment' ,'');
+            return response(['response'=>$response],200);
         }
 
 

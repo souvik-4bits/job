@@ -17,19 +17,28 @@ class customerController extends Controller
 //
 //
 //    }
-    public function getuserPoints(Request $request)
+    public function getuserPoints($id)
     {
+        if($id)
+        {
         $user=point_transaction::where('customer_id',$request['id'])->get();
         $data=[
           'customerPoints'=>$user
         ];
-        $response=APIHelpers::createAPIResponse(false,'test ed' ,$data);
+        $response=APIHelpers::createAPIResponse(false,'Points transactions' ,$data);
         return response(['response'=>$response],200);
+        }
+        else{
+            $response=APIHelpers::createAPIResponse(true,'Id is necessary' ,'');
+            return response(['response'=>$response],400);
+        }
     }
 
 
     public function totalbalancePoint($id)
     {
+        if($id)
+        {
         $credit=point_transaction::where('customer_id',$id)->where('status','credit')->sum('point');
         $debit=point_transaction::where('customer_id',$id)->where(function ($query) {
             $query->where('status','debit')
@@ -41,4 +50,8 @@ class customerController extends Controller
         $response=APIHelpers::createAPIResponse(false,'Total Active Points' ,$data);
         return response(['response'=>$response],200);
     }
+        else{
+            $response=APIHelpers::createAPIResponse(true,'Id is necessary' ,'');
+            return response(['response'=>$response],400);
+        }
 }
