@@ -16,8 +16,8 @@
 $router->group(['prefix' => 'api'], function () use ($router) {
    $router->post('/points','\App\Http\Controllers\Api\pointsController@addPoints');
    $router->post('/void-points','\App\Http\Controllers\Api\pointsController@voidPoints');
-  $router->get('/get-user-point/{id}','\App\Http\Controllers\Api\customerController@getuserPoints');
-    $router->get('/get-user-balance/{id}','\App\Http\Controllers\Api\customerController@totalbalancePoint');
+  $router->get('/customer-transaction/{id}','\App\Http\Controllers\Api\customerController@getuserPoints');
+    $router->get('/customer-balance/{id}','\App\Http\Controllers\Api\customerController@totalbalancePoint');
 
 
 

@@ -8,7 +8,6 @@ class APIHelpers
     {
         $result = [];
         if ($is_error) {
-            dd($is_error);
             $result['status'] = false;
             $result['message'] = $message;
         } else {
@@ -17,7 +16,7 @@ class APIHelpers
                 $result['message'] = $message;
             } else {
                 $result['message'] = $message;
-                $result['data'] = $content;
+                $result['dataset'] = $content;
             }
         }
         return $result;

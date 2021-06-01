@@ -28,8 +28,14 @@ class pointsController extends Controller
         }
         try {
             $pointTransaction = point_transaction::create($request->toarray());
-            $response=APIHelpers::createAPIResponse('false',$request['point'].' points Added Success Fully','');
-return response(['response'=>$response],200);
+            if($request['status']=="credit"){
+            $response=APIHelpers::createAPIResponse('false',$request['point'].' points Added SuccessFully','');
+            return response(['response'=>$response],200);
+            }
+            else{
+                $response=APIHelpers::createAPIResponse('false',$request['point'].' points Deducted SuccessFully','');
+                return response(['response'=>$response],200);
+            }
         } catch (Throwable $throwable) {
             $response=APIHelpers::createAPIResponse(true,'Points cannot added this moment' ,'');
             return response(['response'=>$response],200);
@@ -47,7 +53,7 @@ return response(['response'=>$response],200);
             return response(['message' => 'Validation errors', 'errors' => $validator->errors(), 'status' => false], 422);
         }
         $pointTransaction=point_transaction::find($request['id'])->update(['status'=>'void']);
-        $response=APIHelpers::createAPIResponse('false',' points Voided Success Fully','');
+        $response=APIHelpers::createAPIResponse('false',' points Voided Successfully','');
         return response(['response'=>$response],200);
 
     }
