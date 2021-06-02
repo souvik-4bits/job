@@ -1,8 +1,8 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Jobs API",
-        "description": "Jobs API",
+        "title": "Recruit for Rewards API",
+        "description": "Recruit for Rewards API",
         "contact": {
             "name": "Support Team",
             "email": "support@example.com"
@@ -11,8 +11,8 @@
     },
     "servers": [
         {
-            "url": "http://localhost:8000/",
-            "description": "Job App  API Server"
+            "url": "http://4bitsdev.xyz/",
+            "description": "Recruit for Rewards API Server"
         }
     ],
     "paths": {
