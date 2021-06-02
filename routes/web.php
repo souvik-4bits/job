@@ -14,21 +14,27 @@
 */
 
 $router->group(['prefix' => 'api'], function () use ($router) {
-   $router->post('/points','\App\Http\Controllers\Api\pointsController@addPoints');
-   $router->post('/void-points','\App\Http\Controllers\Api\pointsController@voidPoints');
-  $router->get('/customer-transaction/{id}','\App\Http\Controllers\Api\customerController@getuserPoints');
-    $router->get('/customer-balance/{id}','\App\Http\Controllers\Api\customerController@totalbalancePoint');
+    //ADD points To Customer
+    $router->post('/points', '\App\Http\Controllers\Api\pointsController@addPoints');
+
+    //Void points of Customer
+
+    $router->put('/void-points/{id}', '\App\Http\Controllers\Api\pointsController@voidPoints');
+
+    //Fetch Point Transactions of customer
+
+    $router->get('/customer-transaction/{id}', '\App\Http\Controllers\Api\customerController@getuserPoints');
 
 
-
+    //Fetch Point Balance of customer
+    $router->get('/customer-balance/{id}', '\App\Http\Controllers\Api\customerController@totalbalancePoint');
 
 
 });
 
 
-
 $router->get('/', function () {
-    return 404;
+    return response('',404);
 });
 
 
