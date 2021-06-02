@@ -8,7 +8,7 @@ class Controller extends BaseController
 {
     /**
      * @OA\Info(
-     *   title="Jobs API",
+     *   title="Recruit for Rewards API",
      *   version="1.0",
      *   description="Recruit for Rewards API",
      *   @OA\Contact(
@@ -18,7 +18,7 @@ class Controller extends BaseController
 
      * )
      *     @OA\Server(
-     *      url="http://localhost:8000/",
+     *      url="http://4bitsdev.xyz/",
      *      description="Recruit for Rewards API Server"
      * )
      */
