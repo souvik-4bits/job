@@ -24,7 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3b1c113-e58e-4b12-ba56-2f52172ba6f0" name="Default Changelist" comment="" />
+    <list default="true" id="b3b1c113-e58e-4b12-ba56-2f52172ba6f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,7 +194,7 @@
       <workItem from="1622557486030" duration="11592000" />
       <workItem from="1622571395477" duration="1585000" />
       <workItem from="1622613211753" duration="4126000" />
-      <workItem from="1622618458846" duration="8368000" />
+      <workItem from="1622618458846" duration="9747000" />
     </task>
     <servers />
   </component>
@@ -223,9 +225,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="830" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1622554903293" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1622623323566">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1622630425307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622623323566" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622630425307" />
   </component>
 </project>
